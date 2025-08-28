@@ -1,22 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<title>Portfolio</title>
-</head>
-<body>
-	<nav>
-		<h2>Dilmurat</h2>
-		<ul>
-			<li><a href="#top">Home</a></li>
-			<li><a href="#about">About me</a></li>
-			<li><a href="#services">Services</a></li>
-			<li><a href="#work">My Work</a></li>
-			<li><a href="#contact">Contact me</a></li>
-		</ul>
-		<a href="#contact"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-	</nav>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./tailwint.config.js"></script>
+  </head>
+  <body class="overflow-x-hidden">
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
+      <img src="./images/header-bg-color.png" alt="" class="w-full z-1" />
+    </div>
+    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+      <img src="./images/di7.png" alt="" class="w-30" />
+      <ul
+        class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opasity-50"
+      >
+        <li class="cursor-pointer"><a href="#top">Home</a></li>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">My Work</a></li>
+        <li><a href="#contact">Contact me</a></li>
+      </ul>
+
+      <div class="flex items-center gap-4">
+        <button><img src="./images/moon_icon.png" alt="" class="w-6" /></button>
+
+        <a
+          href="#contact"
+          class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4"
+          >Contact<i class="fa-solid fa-arrow-up-right-from-square"></i
+        ></a>
+        <div class="block md:hidden cursor-pointer" onclick="openMenu()">
+          <img src="./images//menu-black.png" alt="" class="w-6" />
+        </div>
+      </div>
+      <!-- mobile menu -->
+
+      <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed top-0 -right-64 bottom-0 w-64 z-50 h-screen bg-green-50 transition duration-500">
+
+		<div class="absolute top-6 right-6 cursor-pointer" onclick="closeMenu()">
+			<img src="./images/close-black.png" alt="" class="w-6">
+		</div>
+        <li class="cursor-pointer" onclick="closeMenu()"><a href="#top">Home</a></li>
+        <li><a href="#about" onclick="closeMenu()">About me</a></li>
+        <li><a href="#services" onclick="closeMenu()">Services</a></li>
+        <li><a href="#work" onclick="closeMenu()">My Work</a></li>
+        <li><a href="#contact" onclick="closeMenu()">Contact me</a></li>
+      </ul>
+    </nav>
+	<script src="./script.js"></script>
+  </body>
 </html>

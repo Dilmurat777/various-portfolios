@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="./tailwint.config.js"></script>
+    <script src="./tailwind.config.js"></script>
   </head>
+  <style type="text/css"></style>
   <body class="overflow-x-hidden">
     <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
       <img src="./images/header-bg-color.png" alt="" class="w-full z-1" />
@@ -29,18 +30,21 @@
         <a
           href="#contact"
           class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4"
-          >Contact <img src="./images/arrow-icon.png" alt="" class="w-3"></a>
+          >Contact <img src="./images/arrow-icon.png" alt="" class="w-3"
+        /></a>
         <div class="block md:hidden cursor-pointer" onclick="openMenu()">
           <img src="./images//menu-black.png" alt="" class="w-6" />
         </div>
       </div>
       <!-- mobile menu -->
 
-      <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed top-0 -right-64 bottom-0 w-64 z-50 h-screen bg-green-50 transition duration-500">
-
-		<div class="absolute top-6 right-6 cursor-pointer" onclick="closeMenu()">
-			<img src="./images/close-black.png" alt="" class="w-6">
-		</div>
+      <ul
+        id="sideMenu"
+        class="flex md:hidden flex-col gap-4 py-20 px-10 fixed top-0 -right-64 bottom-0 w-64 z-50 h-screen bg-green-50 transition duration-500"
+      >
+        <div class="absolute top-6 right-6 cursor-pointer" onclick="closeMenu()">
+          <img src="./images/close-black.png" alt="" class="w-6" />
+        </div>
         <li class="cursor-pointer" onclick="closeMenu()"><a href="#top">Home</a></li>
         <li><a href="#about" onclick="closeMenu()">About me</a></li>
         <li><a href="#services" onclick="closeMenu()">Services</a></li>
@@ -49,20 +53,131 @@
       </ul>
     </nav>
 
-	<!-- Header -->
+    <!-- Header -->
 
-	<div class="flex flex-col items-center justify-center h-screen gap-4 w-11/12 max-w-3xl text-center mx-auto">
-		<img src="./images/around.png" alt="" class="rounded-full w-36">
-		<h3 class="text-xl flex items-center gap-2 md:text-2xl mb-3">Hi! I'm Dilmurat Palatovich <img src="./images/hand-icon.png" alt="" class="w-6"></h3>
-		<h1 class="text-3xl sm:text-5xl lg:text-[66px]">I am  a frontend developer based on Bishkek</h1>
-		<p class="nax-w-2xl mx-auto">I am a frontend developer from Kyrgyzstan with a strong passion for the IT field. Although I don't have professional experience yet, I have completed a course and continue to learn on my own. I am skilled in React, HTML, CSS, Tailwind CSS, as well as React Vite, Next.js, and other frameworks and libraries.</p>
+    <div
+      class="flex flex-col items-center justify-center h-[90vh] gap-4 w-11/12 max-w-3xl text-center mx-auto"
+    >
+      <img src="./images/around.png" alt="" class="rounded-full w-36" />
+      <h3 class="text-xl flex items-center gap-2 md:text-2xl mb-3">
+        Hi! I'm Dilmurat Palatovich <img src="./images/hand-icon.png" alt="" class="w-6" />
+      </h3>
+      <h1 class="text-3xl sm:text-5xl lg:text-[66px]">
+        I am a frontend developer based on Bishkek
+      </h1>
+      <p class="nax-w-2xl mx-auto">
+        I am a frontend developer from Kyrgyzstan with a strong passion for the IT field. Although I
+        don't have professional experience yet, I have completed a course and continue to learn on
+        my own. I am skilled in React, HTML, CSS, Tailwind CSS, as well as React Vite, Next.js, and
+        other frameworks and libraries.
+      </p>
 
-		<div class="flex flex-col md:flex-row gap-4 mt-4 items-center">
-			<a href="#contact" class="flex items-center gap-3 px-10 py-3 border border-gray-500 rounded-full ml-4 bg-gradient-to-r from-indigo-500 bg-blue-900 text-white shadow shadow-black">Contact me<img src="./images/right-arrow-white.png" alt="" class="w-3" class="w-4"></a>
+      <div class="flex flex-col md:flex-row gap-4 mt-4 items-center">
+        <a
+          href="#contact"
+          class="flex items-center gap-3 px-10 py-3 border border-gray-500 rounded-full ml-4 bg-gradient-to-r from-indigo-500 bg-blue-900 text-white shadow shadow-black"
+          >Contact me<img src="./images/right-arrow-white.png" alt="" class="w-3" class="w-4"
+        /></a>
 
-			<a href="./images/download-icon.png" download class="flex items-center gap-3 px-10 py-3 border border-gray-500 rounded-full ml-4 shadow shadow-black">My resume<img src="./images/download-icon.png" alt="" class="w-3" class="w-4"></a>
-		</div>
-	</div>
-	<script src="./script.js"></script>
+        <a
+          href="./images/download-icon.png"
+          download
+          class="flex items-center gap-3 px-10 py-3 border border-gray-500 rounded-full ml-4 shadow shadow-black"
+          >My resume<img src="./images/download-icon.png" alt="" class="w-3" class="w-4"
+        /></a>
+      </div>
+    </div>
+
+    <!-- About me -->
+
+    <div id="about" class="w-full px-[12%] scroll-mt-20">
+      <h4 class="text-center mb-2 text-lg">Introduction</h4>
+      <h2 class="text-center mb-2 text-5xl">About me</h2>
+      <div class="flex w-full flex-col lg:flex-row items-center gap-10 xl:gap-20 my-20">
+        <div class="max-w-max mx-auto relative">
+          <img
+            src="./images/photo-linkedin.png"
+            alt=""
+            class="w-64 sm:w-80 rounded-3xl max-w-none"
+          />
+          <div
+            class="bg-white w-1/2 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0.15)] flex items-center justify-center"
+          >
+            <img src="./images/circular-text.png" alt="" class="w-full" />
+          </div>
+        </div>
+
+        <div class="flex-1">
+          <p class="mb-10 max-w-2xl">
+            I am a frontend developer from Bishkek with a strong passion for the IT field. I
+            completed a 4-month front-end course in 2023 and continue to study independently. I am
+            experienced in building responsive layouts, implementing logic, and deploying projects
+            using GitHub and Vercel. Additionally, I have knowledge of UI tools such as Figma,
+            Photoshop, Material-UI, and Bootstrap. With strong teamwork, communication, and
+            problem-solving skills, I am eager to start my professional journey as a junior frontend
+            developer, continuously learning and contributing to innovative projects.
+          </p>
+
+          <ul class="grid grid-col-1 sm:grid-cols-3 gap-6 max-w-2xl">
+            <li
+              class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]"
+            >
+              <img src="./images/code-icon.png" alt="" class="w-7 mt-3" />
+              <h3 class="my-4 font-senmibold text-gray-700">Languages</h3>
+              <p class="text-gray-700 text-sm">
+                HTML, CSS, Tailwind, JavaScript, React Js, Next Js
+              </p>
+            </li>
+            <li
+              class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]"
+            >
+              <img src="./images/edu-icon.png" alt="" class="w-7 mt-3" />
+              <h3 class="my-4 font-senmibold text-gray-700">Education</h3>
+              <p class="text-gray-700 text-sm">
+                Completed course "Makers Bootcamp" It web Developer
+              </p>
+            </li>
+            <li
+              class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]"
+            >
+              <img src="./images/project-icon.png" alt="" class="w-7 mt-3" />
+              <h3 class="my-4 font-senmibold text-gray-700">Projects</h3>
+              <p class="text-gray-700 text-sm">Built more than 5 projects</p>
+            </li>
+          </ul>
+          <h4 class="text-gray-700 my-6">Tools I use</h4>
+
+          <ul class="flex items-center gap-3 sm:gap-5">
+            <li
+              class="flex items-center justify-center w-12 sm:w-14 border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 aspect-square shadow shadow-black"
+            >
+              <img src="./images/vscode.png" alt="" class="w-5 sm:w-7" />
+            </li>
+            <li
+              class="flex items-center justify-center w-12 sm:w-14 border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 aspect-square shadow shadow-black"
+            >
+              <img src="./images/firebase.png" alt="" class="w-5 sm:w-7" />
+            </li>
+            <li
+              class="flex items-center justify-center w-12 sm:w-14 border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 aspect-square shadow shadow-black"
+            >
+              <img src="./images/mongodb.png" alt="" class="w-5 sm:w-7" />
+            </li>
+            <li
+              class="flex items-center justify-center w-12 sm:w-14 border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 aspect-square shadow shadow-black"
+            >
+              <img src="./images/figma.png" alt="" class="w-5 sm:w-7" />
+            </li>
+            <li
+              class="flex items-center justify-center w-12 sm:w-14 border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 aspect-square shadow shadow-black"
+            >
+              <img src="./images/git.png" alt="" class="w-5 sm:w-7" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
   </body>
 </html>
